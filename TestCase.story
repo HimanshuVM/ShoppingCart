@@ -107,3 +107,12 @@ Given User is on Home page
 When User click on 'search' box
 And User click on tab key
 Then User should able to see that focus shift to search icon
+
+!-- TC No. 16
+Scenario: Verify that when user search with valide keyword then respective search item should display with total count and verify with database count 
+Given User is on Home page
+When User enter "Print" keyword in 'search' box
+And User click on search icon 
+And User execute DB query with same keyword "Print" 
+Then User should able to see list of respected search item with total count
+And User should able to see total number of search result count and database query count should match 
