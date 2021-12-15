@@ -6,5 +6,13 @@
     "html": false,
     "json": true
   },
-  "video": false
+  "video": false,
+  "env": {
+    "db": {
+      "host": "db_host",
+      "user": "username",
+      "password": "password",
+      "database": "db_name"
+    }
+  }
 }

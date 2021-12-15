@@ -4,8 +4,8 @@
   "description": "To validate Search functionality ",
   "main": "index.js",
   "scripts": {
-    "open": "cypress open",
-    "test:cli": "cypress run",
+    "open": "cypress open --env ENV=prod",
+    "test:cli": "cypress run --env ENV=prod",
     "delete:reportFolder": "del mochawesome-report/",
     "merge:reports": "mochawesome-merge mochawesome-report/*.json > cypress-combined-report.json",
     "create:html:report": "npm run merge:reports && marge --reportDir TestReport cypress-combined-report.json"

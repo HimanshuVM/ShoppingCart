@@ -85,7 +85,6 @@ Then User should able to see that focus shift to search icon
 Scenario: Verify that when user search with valid keyword then respective search item should display with total count and verify with database count
 Given User is on Home page
 When User enter "Print" keyword in search box
-And User click on search icon 
-And User execute DB query with same keyword "Print" 
+And User click on search icon
 Then User should able to see total number of search result count
 And User should able to see total number of search result count and database query count should match 
