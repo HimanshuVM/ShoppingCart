@@ -3,7 +3,7 @@ import search from './cartSearchPage'
 import cartSearchPage from './cartSearchPage'
 
 Given('User is on Home page', () => {
-    cy.visit('http://automationpractice.com/index.php')
+    cartSearchPage.cartSearchHomePage();
 })
 
 When('User enter {string} keyword in search box', searchKeyword => {
@@ -69,10 +69,7 @@ And('User should able to see total number of search result count as 1', ()=>{
     cartSearchPage.cartSearchValidation('1 result has been found.');
 })
 
-And('User execute DB query with same keyword "Print"', ()=>{
-
-})
-
+// As Db details is not available I have commented this implementation once correct db details updated in cypress.json
 And('User should able to see total number of search result count and database query count should match', ()=>{
-
+    //cartSearchPage.cartSearchDatabaseValidation();
 })
