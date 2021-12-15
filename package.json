@@ -1,0 +1,36 @@
+{
+  "name": "shoppingcart",
+  "version": "1.0.0",
+  "description": "To validate Search functionality ",
+  "main": "index.js",
+  "scripts": {
+    "open": "cypress open",
+    "test:cli": "cypress run",
+    "delete:reportFolder": "del mochawesome-report/",
+    "merge:reports": "mochawesome-merge mochawesome-report/*.json > cypress-combined-report.json",
+    "create:html:report": "npm run merge:reports && marge --reportDir TestReport cypress-combined-report.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HimanshuVM/ShoppingCart.git"
+  },
+  "author": "HimanshuVM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HimanshuVM/ShoppingCart/issues"
+  },
+  "homepage": "https://github.com/HimanshuVM/ShoppingCart#readme",
+  "devDependencies": {
+    "cypress": "^9.1.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-plugin-tab": "^1.0.5",
+    "mocha": "^8.3.2",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0",
+    "mysql": "^2.18.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
